@@ -79,11 +79,11 @@ function openString(numberInput) {
                     arrayClicked.push(parseInt(cellElem)) 
                 }
                 
-                // if (arrayClicked.length === parseInt(difficultySelector.value - 16)) {
-                //     console.log("hai vinto");
-                // }
+                if (arrayClicked.length === userInput - 16) {
+                    console.log("hai vinto");
+                }
             }
-            console.log(arrayClicked);
+            
 
 
 

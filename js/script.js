@@ -5,9 +5,10 @@ const grid = document.querySelector(".grid");
 const difficultySelector = document.getElementById("difficulty");
 const playBtn = document.getElementById("play-btn");
 
+// VARIABILI GLOBALI
 let arrayBombs;
 let arrayClicked = [];
-
+let userInput;
 // crerare larray delle celle cliccare 
 
 /*********************************************************/
@@ -18,13 +19,11 @@ playBtn.addEventListener("click", function () {
     const removePrevious = cleaning(grid); //metodo figo 
     // grid.innerHTML = "";  //metodo meno figo
 
-    let userInput = "";
+    
     userInput = difficoult(difficultySelector.value);
 
-    arrayBombs = bombsGenerator(userInput)
+    arrayBombs = bombsGenerator(16)  //debug userInput
     console.log(arrayBombs); 
-    
-    const maxAttempts = (parseInt(userInput) - 16);
     
     const start = openString(userInput);    
 })
