@@ -35,7 +35,7 @@ con difficoltà 3 => tra 1 e 49
 
     - [X] creare un ciclo for che mi ripete questa funzione X volte 
             - [X] Creare un elemento 
-            - [] Al click della cella della griglia:
+            - [X] Al click della cella della griglia:
                 - leggo il numero cliccato 
                 - se il numero cliccato è nell'array di bombe:
                     - la cella diventa rossa

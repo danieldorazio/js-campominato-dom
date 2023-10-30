@@ -9,6 +9,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+
 /* WRAPPER */
 .wrapper {
     width: 100%;
@@ -41,7 +47,7 @@ body {
     width: 40px;
 }
 
-.header-left > h1 {
+h1 {
     font-size: 1.6rem;
     font-weight: bold;
 }
@@ -77,6 +83,7 @@ body {
     max-width: 600px;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 

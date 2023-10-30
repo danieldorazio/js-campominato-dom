@@ -9,6 +9,7 @@ const playBtn = document.getElementById("play-btn");
 let arrayBombs;
 let arrayClicked = [];
 let userInput;
+
 // crerare larray delle celle cliccare 
 
 /*********************************************************/

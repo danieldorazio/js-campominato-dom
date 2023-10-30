@@ -66,32 +66,26 @@ function openString(numberInput) {
             const cellElem = this.textContent;
             console.log(cellElem);
             
-            
+
             if (arrayBombs.includes(parseInt(cellElem))) {
                 element.style.backgroundColor = "red";
-                console.log("fine gioco");
+                grid.innerHTML += `<p class="h1"> Hai perso dopo ${arrayClicked.length + 1} tentativi`
 
             } else {
                 element.style.backgroundColor = "lightblue";
-                console.log("continua ");
 
                 if (!arrayClicked.includes(parseInt(cellElem))) {
                     arrayClicked.push(parseInt(cellElem)) 
                 }
                 
                 if (arrayClicked.length === userInput - 16) {
-                    console.log("hai vinto");
+                    grid.innerHTML += `<p class="h1"> Hai vinto con un punteggio di ${arrayClicked.length} `
                 }
-            }
-            
-
-
-
-
-
+            }    
         })
         grid.append(element); 
-    }    
+    }
+
 }
 
 
