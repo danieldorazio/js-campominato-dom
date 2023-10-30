@@ -1,0 +1,125 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* WRAPPER */
+.wrapper {
+    width: 100%;
+    height: 100vh;  
+}
+
+:root {
+    --header-height: 100px;
+    --footer-height: 50px;
+}
+
+/******************** HEADER *************************/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+    padding: 0 20px;
+}
+
+/* header-left */
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.header-left > img {
+    width: 40px;
+}
+
+.header-left > h1 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* header-right */
+.header-right > select {
+    width: 150px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #e9e9ed;
+    border: none;
+}
+
+.header-right > button {
+    width: 80px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #e9e9ed;
+    border: none;
+}
+
+/*********************** MAIN ***************************/
+.main {
+    display: flex;
+    align-items: center;
+    background-color: #7fffd4;
+    width: 100%;
+    height: calc(100% - var(--header-height) - var(--footer-height));
+}
+
+/* grid */
+.grid {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    border: 1px solid black;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* dificult */
+.easy {
+    width: calc(100% / 10);
+    aspect-ratio: 1;
+}
+
+.medium {
+    width: calc(100% / 9);
+    aspect-ratio: 1;
+}
+
+.hard {
+    width: calc(100% / 7);
+    aspect-ratio: 1;
+}
+
+/* clickCell */
+.azzurro {
+    background-color: rgb(24, 159, 226);
+}
+
+
+/*********************** FOOTER *******************/
+.footer {
+    height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer > div {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
