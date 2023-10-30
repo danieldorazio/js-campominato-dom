@@ -62,9 +62,33 @@ function openString(numberInput) {
     for (let i = 0; i < numberCell.length; i++) {
         const element = numberCell[i];
         element.addEventListener("click", function () {
-            this.classList.add("azzurro")
+            
             const cellElem = this.textContent;
-            console.log(cellElem);    //deve comparire in console no in alert da corregere
+            console.log(cellElem);
+            
+            
+            if (arrayBombs.includes(parseInt(cellElem))) {
+                element.style.backgroundColor = "red";
+                console.log("fine gioco");
+
+            } else {
+                element.style.backgroundColor = "lightblue";
+                console.log("continua ");
+
+                if (!arrayClicked.includes(parseInt(cellElem))) {
+                    arrayClicked.push(parseInt(cellElem)) 
+                }
+                
+                // if (arrayClicked.length === parseInt(difficultySelector.value - 16)) {
+                //     console.log("hai vinto");
+                // }
+            }
+            console.log(arrayClicked);
+
+
+
+
+
         })
         grid.append(element); 
     }    

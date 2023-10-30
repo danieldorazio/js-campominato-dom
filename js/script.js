@@ -5,6 +5,9 @@ const grid = document.querySelector(".grid");
 const difficultySelector = document.getElementById("difficulty");
 const playBtn = document.getElementById("play-btn");
 
+let arrayBombs;
+let arrayClicked = [];
+
 // crerare larray delle celle cliccare 
 
 /*********************************************************/
@@ -18,11 +21,10 @@ playBtn.addEventListener("click", function () {
     let userInput = "";
     userInput = difficoult(difficultySelector.value);
 
-    const arrayBombs = bombsGenerator(16)
+    arrayBombs = bombsGenerator(userInput)
     console.log(arrayBombs); 
     
     const maxAttempts = (parseInt(userInput) - 16);
-    console.log(maxAttempts);
     
     const start = openString(userInput);    
 })
