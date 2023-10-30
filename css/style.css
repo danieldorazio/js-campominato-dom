@@ -87,6 +87,10 @@ h1 {
     flex-wrap: wrap;
 }
 
+.red {
+    background-color: red;
+}
+
 .cell {
     border: 1px solid black;
     
@@ -126,3 +130,4 @@ h1 {
     align-items: center;
     font-weight: 600;
 }
+

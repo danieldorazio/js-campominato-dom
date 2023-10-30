@@ -2,6 +2,7 @@
 
 const grid = document.querySelector(".grid");
 
+
 const difficultySelector = document.getElementById("difficulty");
 const playBtn = document.getElementById("play-btn");
 
@@ -23,8 +24,10 @@ playBtn.addEventListener("click", function () {
     
     userInput = difficoult(difficultySelector.value);
 
-    arrayBombs = bombsGenerator(16)  //debug userInput
+    arrayBombs = bombsGenerator(userInput) 
     console.log(arrayBombs); 
+    
+   
     
     const start = openString(userInput);    
 })

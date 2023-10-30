@@ -70,6 +70,12 @@ function openString(numberInput) {
             if (arrayBombs.includes(parseInt(cellElem))) {
                 element.style.backgroundColor = "red";
                 grid.innerHTML += `<p class="h1"> Hai perso dopo ${arrayClicked.length + 1} tentativi`
+                // console.log(numberCell);
+                for (let i = 0; i < arrayBombs.length; i++) {
+                    const elem = arrayBombs[i];
+                    document.querySelectorAll('.cell')[elem].style.backgroundColor = "red";
+                }
+
 
             } else {
                 element.style.backgroundColor = "lightblue";
@@ -112,11 +118,13 @@ function gridElem(gridNumber) {
 }
 
 
+
 /**FUNZIONE numberGenerator
  * funzione che crea una stringa di numeri di X lunghezza e poi la apre per prenderegli singoli numeri
  * @param {number} maxNumber valore quantità di numeri 
  * @returns {number} 
  */
+
 function numberGeneretor(maxNumber) {
     // per creare nuemro da inserire nell'elemento
     const numberElements = [];
