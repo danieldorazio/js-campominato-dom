@@ -70,22 +70,21 @@ function openString(numberInput) {
             if (arrayBombs.includes(parseInt(cellElem))) {
                 element.style.backgroundColor = "red";
                 grid.innerHTML += `<p class="h1"> Hai perso dopo ${arrayClicked.length + 1} tentativi`
-                // console.log(numberCell);
+                
                 for (let i = 0; i < arrayBombs.length; i++) {
                     const elem = arrayBombs[i];
                     document.querySelectorAll('.cell')[elem].style.backgroundColor = "red";
                 }
 
-
             } else {
                 element.style.backgroundColor = "lightblue";
 
                 if (!arrayClicked.includes(parseInt(cellElem))) {
-                    arrayClicked.push(parseInt(cellElem)) 
+                    arrayClicked.push(parseInt(cellElem));
                 }
                 
                 if (arrayClicked.length === userInput - 16) {
-                    grid.innerHTML += `<p class="h1"> Hai vinto con un punteggio di ${arrayClicked.length} `
+                    grid.innerHTML += `<p class="h1"> Hai vinto con un punteggio di ${arrayClicked.length} `;
                 }
             }    
         })
